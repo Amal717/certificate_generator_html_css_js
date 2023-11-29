@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
       // Redirect to the home page in the same directory (e.g., home.html)
-      window.location.href = "home.html";
+      window.location.href = "home_page/home.html";
     } else {
       // Display an error message or handle the login failure
       alert("Invalid username or password. Please try again.");

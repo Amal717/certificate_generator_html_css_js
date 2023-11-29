@@ -6,6 +6,7 @@
     <title>Select a Template</title>
     <link rel="stylesheet" href="individual.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="individual.js"></script>
 </head>
 <body>
     <div id="container">
@@ -21,21 +22,25 @@
         </div>
         
         <!-- Form Section -->
-        <div id="form-section" style="display: none;">
+        <div id="form-section">
             <form id="certificate-form">
-                <label for="participant-name">Enter the Participant Name:</label>
+            <div>
+                <label for="participant-name">Participant Name:</label>
                 <input type="text" id="participant-name" name="participantName" required>
+            </div>
 
-                <label for="institution-name">Enter the Name of the Institution:</label>
+            <div>
+                <label for="institution-name">Institution Name:</label>
                 <input type="text" id="institution-name" name="institutionName" required>
+            </div>
 
-                <label for="event-name">Enter the Event Name:</label>
+            <div>
+                <label for="event-name">Event Name:</label>
                 <input type="text" id="event-name" name="eventName" required>
-
+            </div>
                 <button type="button" onclick="generateCertificate()">Generate Certificate</button>
             </form>
         </div>
     </div>
-    <script src="individual.js"></script>
 </body>
 </html>
