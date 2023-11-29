@@ -29,12 +29,12 @@ function generateCertificate() {
     const eventName = document.getElementById('event-name').value;
 
     // Define the x, y coordinates for placing text (replace these values with your actual coordinates)
-    const participantNameX = 397;
-    const participantNameY = 308;
-    const institutionNameX = 100;
-    const institutionNameY = 250;
-    const eventNameX = 100;
-    const eventNameY = 300;
+    const participantNameX = 682;
+    const participantNameY = 707;
+    const institutionNameX = 295;
+    const institutionNameY = 883;
+    const eventNameX = 953;
+    const eventNameY = 984;
 
     // Create a new canvas element
     const canvas = document.createElement('canvas');
@@ -50,7 +50,7 @@ function generateCertificate() {
 
     // Add text to the canvas at specific coordinates
     context.fillStyle = 'black'; // Set text color to black
-    context.font = 'bold 16px Arial';
+    context.font = 'bold 50px Arial';
 
     // Add participant name
     context.fillText(participantName, participantNameX, participantNameY);
