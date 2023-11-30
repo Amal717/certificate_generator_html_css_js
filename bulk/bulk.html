@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulk Certificate Generation</title>
+    <title>Select a Template</title>
     <link rel="stylesheet" href="bulk.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="bulk.js"></script>
+    <script src="jszip/dist/jszip.min.js"></script>
 </head>
 <body>
     <div id="container">
-        <h2>Bulk Certificate Generation</h2>
+        <h2>Select a Template</h2>
         
         <!-- Template Selection Section -->
         <div id="template-selection">
@@ -21,18 +22,17 @@
             </div>
         </div>
         
-        <!-- Bulk Upload Section -->
-        <div id="bulk-upload-section">
-            <label for="csv-file">Upload CSV File:</label>
-            <input type="file" id="csv-file" accept=".csv">
-            <button type="button" onclick="processCSV()">Generate Certificates</button>
-        </div>
-
         <!-- Form Section -->
-        <div id="form-section" style="display: none;">
+        <div id="form-section">
             <form id="certificate-form">
-                <!-- No individual participant name input here -->
-                
+                <!-- CSV Upload Section -->
+                <div id="csv-upload">
+                    <input type="file" id="csv-file" accept=".csv">
+                    <button type="button" class="upload-button" onclick="uploadCSV()">Upload CSV</button>
+                    <!-- Display the selected CSV file name -->
+                    <div id="selected-csv"></div>
+                </div>
+
                 <div>
                     <label for="institution-name">Institution Name:</label>
                     <input type="text" id="institution-name" name="institutionName" required>

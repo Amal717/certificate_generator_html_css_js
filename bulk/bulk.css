@@ -1,40 +1,63 @@
-/* ... (existing styles) ... */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #2980b9, #6dd5fa);
+    color: #fff;
+}
 
-#bulk-upload-section {
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 28px;
+    color: #333;
+}
+
+#template-selection {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    margin-bottom: 20px;
 }
 
-#csv-file {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 2px solid #ddd;
+#selected-template-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#selected-template-container img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #007BFF;
     border-radius: 5px;
-    font-size: 16px;
 }
 
-#bulk-upload-section button {
-    margin-top: 20px;
-    padding: 14px 28px;
-    font-size: 18px;
+#template-options {
+    display: flex;
+    gap: 20px;
+}
+
+#template-options img {
+    width: 200px;
+    height: auto;
     cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #fff;
-    background: linear-gradient(45deg, #28a745, #218838);
-    border: none;
+    border: 2px solid transparent;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s;
-}
-
-#bulk-upload-section button:hover {
-    background: linear-gradient(45deg, #218838, #1e7e34);
+    transition: border-color 0.3s;
 }
 
 #form-section {
@@ -96,4 +119,23 @@ button:hover {
     background: linear-gradient(45deg, #0056b3, #003366);
 }
 
-/* ... (other styles) ... */
+
+
+.upload-button {
+    padding: 8px 12px; /* Further reduced padding for a smaller button */
+    font-size: 12px; /* Further reduced font size */
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(45deg, #00ff4c, #0056b3);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+}
+
+.upload-button:hover {
+    background: linear-gradient(45deg, #0056b3, #003366);
+}
