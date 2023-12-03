@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select a Template</title>
+    <title>Certificate Generator</title>
     <link rel="stylesheet" href="bulk.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="bulk.js"></script>
-    <script src="jszip/dist/jszip.min.js"></script>
 </head>
 <body>
     <div id="container">
-        <h2>Select a Template</h2>
-        
+        <h2>Certificate Generator</h2>
+
         <!-- Template Selection Section -->
         <div id="template-selection">
             <div id="selected-template-container"></div>
@@ -21,7 +18,7 @@
                 <img src="2.jpg" alt="Template 2" onclick="selectTemplate(2)">
             </div>
         </div>
-        
+
         <!-- Form Section -->
         <div id="form-section">
             <form id="certificate-form">
@@ -46,5 +43,6 @@
             </form>
         </div>
     </div>
+    <script src="bulk.js"></script>
 </body>
 </html>

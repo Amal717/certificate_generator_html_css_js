@@ -31,9 +31,9 @@ function generateCertificate() {
     // Define the x, y coordinates for placing text (replace these values with your actual coordinates)
     const participantNameX = 682;
     const participantNameY = 707;
-    const institutionNameX = 295;
+    const institutionNameX = 368;
     const institutionNameY = 883;
-    const eventNameX = 953;
+    const eventNameX = 1012;
     const eventNameY = 984;
 
     // Create a new canvas element
