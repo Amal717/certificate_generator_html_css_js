@@ -25,7 +25,6 @@
                 <!-- CSV Upload Section -->
                 <div id="csv-upload">
                     <input type="file" id="csv-file" accept=".csv">
-                    <button type="button" class="upload-button" onclick="uploadCSV()">Upload CSV</button>
                     <!-- Display the selected CSV file name -->
                     <div id="selected-csv"></div>
                 </div>
@@ -39,10 +38,14 @@
                     <label for="event-name">Event Name:</label>
                     <input type="text" id="event-name" name="eventName" required>
                 </div>
-                <button type="button" onclick="generateCertificate()">Generate Certificate</button>
+
+                <!-- Combine the generate and compress functions into one -->
+                <button type="button" onclick="generateAndDownloadCertificates()">Generate Certificates</button>
             </form>
         </div>
     </div>
     <script src="bulk.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+
 </body>
 </html>
