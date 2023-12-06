@@ -94,6 +94,16 @@ input {
     font-size: 16px;
 }
 
+/* Add styling for logo upload */
+#logo-upload {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
 .button-container {
     display: flex;
     justify-content: center;
