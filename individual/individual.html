@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select a Template</title>
+    <title>Certificate Generator</title>
     <link rel="stylesheet" href="individual.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="individual.js"></script>
 </head>
 <body>
     <div id="container">
-        <h2>Select a Template</h2>
-        
+        <h2>Certificate Generator</h2>
+
         <!-- Template Selection Section -->
         <div id="template-selection">
             <div id="selected-template-container"></div>
@@ -20,27 +18,39 @@
                 <img src="2.jpg" alt="Template 2" onclick="selectTemplate(2)">
             </div>
         </div>
-        
+
         <!-- Form Section -->
         <div id="form-section">
             <form id="certificate-form">
-            <div>
-                <label for="participant-name">Participant Name:</label>
-                <input type="text" id="participant-name" name="participantName" required>
-            </div>
+                <div>
+                    <label for="participant-name">Participant Name:</label>
+                    <input type="text" id="participant-name" name="participantName" required>
+                </div>
 
-            <div>
-                <label for="institution-name">Institution Name:</label>
-                <input type="text" id="institution-name" name="institutionName" required>
-            </div>
+                <div>
+                    <label for="institution-name">Institution Name:</label>
+                    <input type="text" id="institution-name" name="institutionName" required>
+                </div>
 
-            <div>
-                <label for="event-name">Event Name:</label>
-                <input type="text" id="event-name" name="eventName" required>
-            </div>
+                <div>
+                    <label for="event-name">Event Name:</label>
+                    <input type="text" id="event-name" name="eventName" required>
+                </div>
+
+                <!-- Logo Upload Section -->
+                <div>
+                    <label for="logo-upload">Logo Upload:</label>
+                    <input type="file" id="logo-upload" name="logoUpload" accept=".png, .jpg, .jpeg">
+                </div>
+
+                <!-- Display the selected logo name -->
+                <div id="selected-logo"></div>
+
                 <button type="button" onclick="generateCertificate()">Generate Certificate</button>
             </form>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="individual.js"></script>
 </body>
 </html>
