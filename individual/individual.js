@@ -66,7 +66,7 @@ function resizeImage(originalImage, maxWidth) {
     return resizedImage;
 }
 
-function generateCertificate() {
+async function generateCertificate() {
     if (!templateImage) {
         console.error('No template selected');
         return;
@@ -77,24 +77,8 @@ function generateCertificate() {
     const institutionName = document.getElementById('institution-name').value;
     const eventName = document.getElementById('event-name').value;
 
-    // Call function to handle logo upload
-    handleLogoUpload();
-
-    // Ensure the logo is loaded before proceeding
-    if (!logoImage) {
-        console.error('Logo not loaded');
-        return;
-    }
-
-    // Define the x, y coordinates for placing text (replace these values with your actual coordinates)
-    const participantNameX = 682;
-    const participantNameY = 707;
-    const institutionNameX = 368;
-    const institutionNameY = 883;
-    const eventNameX = 1012;
-    const eventNameY = 984;
-    const logoX = 1000;
-    const logoY = 800;
+    // Call function to handle logo upload (optional)
+    await handleLogoUpload();
 
     // Create a new canvas element
     const canvas = document.createElement('canvas');
@@ -107,12 +91,27 @@ function generateCertificate() {
     // Draw the template image on the canvas
     context.drawImage(templateImage, 0, 0, templateImage.naturalWidth, templateImage.naturalHeight);
 
-    // Draw the logo on the canvas
-    context.drawImage(logoImage, logoX, logoY);
+    // Check if a logo is available
+    if (logoImage) {
+        // Define the x, y coordinates for placing the logo (adjust these values as needed)
+        const logoX = 1000;
+        const logoY = 800;
+
+        // Draw the logo on the canvas
+        context.drawImage(logoImage, logoX, logoY);
+    }
 
     // Add text to the canvas at specific coordinates
     context.fillStyle = 'black'; // Set text color to black
     context.font = 'bold 50px Arial';
+
+    // Define the x, y coordinates for placing text (adjust these values as needed)
+    const participantNameX = 682;
+    const participantNameY = 707;
+    const institutionNameX = 368;
+    const institutionNameY = 883;
+    const eventNameX = 1012;
+    const eventNameY = 984;
 
     // Add participant name
     context.fillText(participantName, participantNameX, participantNameY);
@@ -127,3 +126,5 @@ function generateCertificate() {
     const newWindow = window.open();
     newWindow.document.body.appendChild(canvas);
 }
+
+
