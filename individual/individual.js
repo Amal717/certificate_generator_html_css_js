@@ -94,8 +94,8 @@ async function generateCertificate() {
     // Check if a logo is available
     if (logoImage) {
         // Define the x, y coordinates for placing the logo (adjust these values as needed)
-        const logoX = 1000;
-        const logoY = 800;
+        const logoX = 963;
+        const logoY = 1168;
 
         // Draw the logo on the canvas
         context.drawImage(logoImage, logoX, logoY);
